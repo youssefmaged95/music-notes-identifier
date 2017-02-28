@@ -85,5 +85,5 @@ for i=1:1:r;
 end
 
   figure, imshow(uint8(filtered));
-  output = filtered;
+  output = (uint8(filtered));
 end
