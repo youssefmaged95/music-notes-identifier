@@ -5,7 +5,6 @@ range = max - min ;
 max_class_variance = 0;
 max_k = 0;
 for k=min:1:max-1
-
   [r,c,~]  =  size(image) ;
   count = 0;
   histogram = zeros(1 , range  );
@@ -66,7 +65,7 @@ for k=min:1:max-1
   end
 
 
-  class_variance =  ( probability_less * ( ( mean_less - mean ) ^ 2 ) ) + ( probability_greater * ( ( mean_greater - mean ) ^ 2 ) )
+  class_variance =  ( probability_less * ( ( mean_less - mean ) ^ 2 ) ) + ( probability_greater * ( ( mean_greater - mean ) ^ 2 ) );
 
   if(class_variance>max_class_variance);
     max_k = k;
@@ -84,6 +83,6 @@ for i=1:1:r;
     end
 end
 
-  figure, imshow(uint8(filtered));
+  %figure, imshow(uint8(filtered));
   output = (uint8(filtered));
 end

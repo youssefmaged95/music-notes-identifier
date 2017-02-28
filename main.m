@@ -1,6 +1,8 @@
 function main( path );
   image    =  imread(path);
-  %remove_noise(image);
-  OTSU( mean_filter( image ) );
-  %figure, imshow( image );
+  %disp('Filtering Image...');
+  %image = mean_filter( image );
+  disp('Converting To Binary...');
+  image = OTSU( image );
+  compare_keys( cut(image , 1 , 91 ));
 end
