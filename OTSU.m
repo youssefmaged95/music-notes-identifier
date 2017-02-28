@@ -1,14 +1,15 @@
 function [ output ] = OTSU( image )
 max = 255;
 min = 0;
+range = max - min ;
 max_class_variance = 0;
 max_k = 0;
 for k=min:1:max-1
 
   [r,c,~]  =  size(image) ;
   count = 0;
-  histogram = zeros(1 , max - min  );
-  probabilities = zeros(1 , max - min  );
+  histogram = zeros(1 , range  );
+  probabilities = zeros(1 , range  );
   probability_less = 0;
   probability_greater = 0;
   mean_less = 0;
@@ -32,13 +33,13 @@ for k=min:1:max-1
 
   %Normalize The Histogram
 
-  for i=1:1:(max-min);
+  for i=1:1:(range);
     probabilities(1,i) = histogram(1,i) / count ;
   end
 
   %Fill Out class Probabilities
 
-  for i=1:1:(max-min);
+  for i=1:1:(range);
     if(i <= k)
       probability_less = probability_less + probabilities(1,i);
     else
@@ -48,7 +49,7 @@ for k=min:1:max-1
 
   %Mean Value Of Each class Summation
 
-  for i=1:1:(max-min);
+  for i=1:1:(range);
     if(i <= k)
       mean_less = mean_less + ( (i-1) * probabilities(1,i)) ;
     else
@@ -60,7 +61,7 @@ for k=min:1:max-1
 
   %Global Variance Summation
 
-  for i=1:1:(max-min);
+  for i=1:1:(range);
     global_variance = global_variance + ( ( ( (i-1) - mean ) ^ 2 ) * probabilities(1,i) );
   end
 
