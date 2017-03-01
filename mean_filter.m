@@ -25,5 +25,7 @@ function [ output ] = mean_filter( image , filter_size );
           sum = 0;
       end
   end
-
+  figure, imshow( uint8(filtered) );
   output = uint8(filtered);
+
+end
