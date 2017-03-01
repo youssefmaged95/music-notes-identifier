@@ -38,7 +38,27 @@ This program takes as input a low quality image of a music piece (a line startin
    </ul>
    <h4>Output :</h4>
    <img src='Images/cut.JPG'/>
+   
+   
+   <h2> get_common_pixels( image1 , image2 )</h2>
+   <ul>
+     <li>This function takes two images as an input</li>
+     <li>The output is the number of pixels in both images that have the same index and value</li>
+   </ul>
+   
+   <h2> get_best_match( image  )</h2>
+   <ul>
+     <li>This function takes an images as an input</li>
+     <li>The output is the name of the image in the database that has the most common pixels with the input image</li>
+   </ul>
     
+    
+    <h2> main( image_path )</h2>
+   <ul>
+     <li>This function takes a  low quality image of a music piece as an input</li>
+     <li>Enhances the image</li>
+     <li>Compares it to the digital segmented music key/notes images</li>
+   </ul>
 
       
       
