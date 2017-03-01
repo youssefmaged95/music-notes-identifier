@@ -6,6 +6,15 @@ This program takes as input a low quality image of a music piece (a line startin
    <h4>Input :</h4>
    <img src='Images/original.jpg'/>
    
+   <h2> main( image_path )</h2>
+   <ul>
+     <li>This function takes a  low quality image of a music piece as an input</li>
+     <li>Enhances the image</li>
+     <li>Compares it to the digital segmented music key/notes images</li>
+     <li>The output is the corresponding key namesof the music piece</li>
+   </ul>
+
+   
    <h2> OTSU( image )</h2>
    <ul>
      <li>This function takes an image as an input</li>
@@ -53,12 +62,6 @@ This program takes as input a low quality image of a music piece (a line startin
    </ul>
     
     
-    <h2> main( image_path )</h2>
-   <ul>
-     <li>This function takes a  low quality image of a music piece as an input</li>
-     <li>Enhances the image</li>
-     <li>Compares it to the digital segmented music key/notes images</li>
-   </ul>
 
       
       
