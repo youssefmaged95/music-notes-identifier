@@ -1,5 +1,4 @@
-function [ output ] = mean_filter( image );
-  filter_size = 2;
+function [ output ] = mean_filter( image , filter_size );
   sum = int64(0);
   [r,c,~]  =  size(image) ;
   filtered =  zeros(r , c);
