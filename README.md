@@ -3,6 +3,9 @@ This program takes as input a low quality image of a music piece (a line startin
 
 <h1>Helpers : </h1>
    
+   <h4>Input :</h4>
+   <img src='Images/original.jpg'/>
+   
    <h2> OTSU( image )</h2>
    <ul>
      <li>This function takes an image as an input</li>
@@ -11,8 +14,6 @@ This program takes as input a low quality image of a music piece (a line startin
      <img src='Images/algorithm.JPG'>
      <li>The output is a binary image where every pixel is either set to 0 or 255 </li>
    </ul>
-   <h4>Input :</h4>
-   <img src='Images/original.jpg'/>
    <h4>Output :</h4>
    <img src='Images/OTSU.jpg'/>
 
@@ -25,10 +26,18 @@ This program takes as input a low quality image of a music piece (a line startin
      <li>It sets the value of each pixel to the mean value of the surrounding (filter_size * filter_size) pixels</li>
      <li>The output is a filtered image</li>
    </ul>
-   <h4>Input :</h4>
-   <img src='Images/original.jpg'/>
    <h4>Output :</h4>
-   <img src='Images/remove_noise.jpg'/>
+   <img src='Images/mean_filter.jpg'/>
+   
+   
+   <h2> cut( image , start_point , end_point )</h2>
+   <ul>
+     <li>This function takes an image , start_point and an end_point as an input</li>
+     <li>It crops the image so that the width of the image is (end_point - start_point) and the image starts at the starting_point on the original image</li>
+     <li>The output is a cropped image</li>
+   </ul>
+   <h4>Output :</h4>
+   <img src='Images/cut.JPG'/>
     
 
       
