@@ -60,8 +60,8 @@ This program takes as input a low quality image of a music piece (a line startin
    
    <h2> ssd( image1 , image2 )</h2>
    <ul>
-     <li>This function takes an images as an input</li>
-     <li>The output is the name of the image in the database where ssd( image , database_image ) returns the lowest value</li>
+     <li>This function takes two images as an input</li>
+     <li>The output is the summation of the squares of the differences between corresponding pixels <br>Equation : SUMMATION(( image1(x,y) - image2(x,y))^2)</li>
    </ul>
    
    <h2> get_best_match( image )</h2>
