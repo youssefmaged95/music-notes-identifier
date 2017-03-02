@@ -1,4 +1,4 @@
-function [ output ] = pixel_sum( image , image2 )
+function [ output ] = get_common_pixels( image , image2 )
   [r,c,~]  =  size(image) ;
   [r1,c1,~]  =  size(image2) ;
   if ~(c1 == c)

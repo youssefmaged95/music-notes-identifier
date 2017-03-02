@@ -1,8 +1,8 @@
 function [ output ] = main( path );
   output= '';
   image    =  imread(path);
-  %disp('Filtering Image...');
-  %image = mean_filter( image , 2 );
+  disp('Filtering Image...');
+  image = mean_filter( image , 2 );
   disp('Converting To Binary...');
   image = OTSU( image );
   clef = ( get_best_match( cut( image , 1 , 92 ) ) );
