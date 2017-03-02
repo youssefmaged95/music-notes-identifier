@@ -1,17 +1,20 @@
 <h1>Music-Notes-Identifier</h1>
 This program takes as input a low quality image of a music piece (a line starting by a music key followed by music notes), enhances the image and then compares it to the digital segmented music key/notes images
 
-<h1>Helpers : </h1>
    
    <h4>Input :</h4>
    <img src='Images/original.jpg'/>
    
+   <h1>Helpers : </h1>
+   
    <h2> main( image_path )</h2>
    <ul>
      <li>This function takes a  low quality image of a music piece as an input</li>
-     <li>Enhances the image</li>
-     <li>Compares it to the digital segmented music key/notes images</li>
-     <li>The output is the corresponding key namesof the music piece</li>
+     <li>Filters the image using mean_filter( image )</li>
+     <li>Convert the image to binary using OTSU( image )</li>
+     <li>Divides the image into 14 images (1 music clef and 13 music keys)</li>
+     <li>It gets the best match for each of the 14 images from the database </li>
+     <li>The output is the corresponding key names of the music piece</li>
    </ul>
 
    
@@ -25,9 +28,7 @@ This program takes as input a low quality image of a music piece (a line startin
    <img src='Images/OTSU.jpg'/>
 
 
-
    <h2> mean_filter( image , filter_size )</h2>
-   <p>"Implemented Not Used"</p>
    <ul>
      <li>This function takes an image and a filter size value as an input</li>
      <li>It sets the value of each pixel to the mean value of the surrounding (filter_size * filter_size) pixels</li>
@@ -40,7 +41,7 @@ This program takes as input a low quality image of a music piece (a line startin
    <h2> cut( image , start_point , end_point )</h2>
    <ul>
      <li>This function takes an image , start_point and an end_point as an input</li>
-     <li>It crops the image so that the width of the image is (end_point - start_point) and the image starts at the starting_point on the original image</li>
+     <li>It crops the image so that the width of the image is (end_point - start_point) where the image starts at the starting_point in the original image</li>
      <li>The output is a cropped image</li>
    </ul>
    <h4>Output :</h4>
@@ -48,15 +49,22 @@ This program takes as input a low quality image of a music piece (a line startin
    
    
    <h2> get_common_pixels( image1 , image2 )</h2>
+    <p>"Implemented Not Used"</p>
    <ul>
      <li>This function takes two images as an input</li>
      <li>The output is the number of pixels in both images that have the same index and value</li>
    </ul>
    
-   <h2> get_best_match( image  )</h2>
+   <h2> ssd( image1 , image2 )</h2>
    <ul>
      <li>This function takes an images as an input</li>
-     <li>The output is the name of the image in the database that has the most common pixels with the input image</li>
+     <li>The output is the name of the image in the database where ssd( image , database_image ) returns the lowest value</li>
+   </ul>
+   
+   <h2> get_best_match( image )</h2>
+   <ul>
+     <li>This function takes an image as an input</li>
+     <li>The output is the name of the image in the database where ssd( image , database_image ) returns the lowest value</li>
    </ul>
     
     
