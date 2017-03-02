@@ -18,9 +18,7 @@ This program takes as input a low quality image of a music piece (a line startin
    <h2> OTSU( image )</h2>
    <ul>
      <li>This function takes an image as an input</li>
-     <li>It uses OTSU's algorithm to convert image to binary</li>
-     <img src='Images/algorithm2.jpg'>
-     <img src='Images/algorithm.JPG'>
+     <li>It uses  <a href = "https://en.wikipedia.org/wiki/Otsu's_method">OTSU's Algorithm</a> to convert image to binary</li>
      <li>The output is a binary image where every pixel is either set to 0 or 255 </li>
    </ul>
    <h4>Output :</h4>
