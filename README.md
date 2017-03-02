@@ -5,6 +5,9 @@ This program takes as input a low quality image of a music piece (a line startin
    <h4>Input :</h4>
    <img src='Images/original.jpg'/>
    
+   <h4>Output :</h4>
+   <p>E2 ,F3 ,A3 ,B2 ,D3 ,D3 ,C4 ,E3 ,F3 ,G2 ,C4 ,A2 ,C4</p>
+   
    <h1>Helpers : </h1>
    
    <h2> main( image_path )</h2>
