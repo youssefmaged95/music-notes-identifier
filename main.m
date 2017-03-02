@@ -1,10 +1,11 @@
-function [ output ] = main( path );
+function  main( path );
   output= '';
   image    =  imread(path);
   disp('Filtering Image...');
   image = mean_filter( image , 2 );
   disp('Converting To Binary...');
   image = OTSU( image );
+  disp('Matching Images...');
   clef = ( get_best_match( cut( image , 1 , 92 ) ) );
   start_point = 92;
   end_point = 153;
@@ -20,4 +21,5 @@ function [ output ] = main( path );
     start_point = end_point;
     end_point = end_point + 61 ;
   end
+disp(output);
 end
